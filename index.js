@@ -34,13 +34,13 @@ $(".parkLookupForm").submit(function(event){
     console.log("parkLookupFormisbeinghit")
     let userInput = $("input:checked");
     for(let i=0; i < userInput.length; i++) {
-    let newUrl = url+states+(userInput[i].defaultValue) + '&'+ limitSet+ + parkKey;
+    let newUrl = url+states+(userInput[i].defaultValue) + '&'+ limitSet + '&' + parkKey;
     console.log(newUrl)
 
     //developer.nps.gov/api/v1/campgrounds?stateCode=CA&stateCode=OR&limit=10&api_key=aQEBWaaigBxcc3bJE4l3aLTkWtRiBeJ4ifmuNb7z"// https://developer.nps.gov/api/v1/parks?limit=10stateCode=AL&limit=10NaN
         // // ('https://developer.nps.gov/api/v1/parks?'+limitSet+states+parkKey);
 
-    fetch(url)
+    fetch(newUrl)
     .then(response => response.json())
     .then(responseJson => printParkResults(responseJson));
     // console.log('https://developer.nps.gov/api/v1/parks?'+limitSet+states+parkKey);
