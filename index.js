@@ -31,8 +31,8 @@ $(".parkLookupForm").submit(function(event){
     let limitSet ='limit='+$(".numberOfResults").val();
     let url= 'https://developer.nps.gov/api/v1/parks?'+limitSet;
     let states="stateCode="
-    console.log("parkLookupFormisbeinghit")
     let userInput = $("input:checked");
+    empty();
     for(let i=0; i < userInput.length; i++) {
     let newUrl = url+states+(userInput[i].defaultValue) + '&'+ limitSet + '&' + parkKey;
     console.log(newUrl)
@@ -54,7 +54,6 @@ $(".parkLookupForm").submit(function(event){
 function printParkResults(parkObject) {
   console.log(parkObject);
   let data = parkObject.data;
-  console.log(data);
     for(let i=0; i < data.length; i++) {
       // console.log("displayParkResults loop")
       $('.stateContainer').append(`<li>${data[i].fullName} + ${data[i].description} + ${data[i].url} </li>`);
@@ -68,6 +67,6 @@ function printParkResults(parkObject) {
     )};
      
     function empty(){
-        $( ".repoContainer" ).empty();
+        $(".stateContainer").empty();
       };
     
