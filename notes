@@ -1,0 +1,68 @@
+<p>Choose your monster's features:</p>
+
+<div>
+  <input type="checkbox" id="scales" name="scales"
+         checked>
+  <label for="scales">Scales</label>
+</div>
+
+<div>
+  <input type="checkbox" id="horns" name="horns">
+  <label for="horns">Horns</label>
+</div>
+
+
+<select class="selectStatesForm" multiple="">
+                            <input type="checkbox" value="AL">Alabama</input>
+                            <input type="checkbox" value="AK">Alaska</input>
+                            <input type="checkbox" value="AZ">Arizona</input>
+                            <input type="checkbox" value="AR">Arkansas</input>
+                            <input type="checkbox" value="CA">California</input>
+                            <input type="checkbox" value="CO">Colorado</input>
+                            <input type="checkbox" value="CT">Connecticut</input>
+                            <input type="checkbox" value="DE">Delaware</input>
+                            <input type="checkbox" value="DC">District Of Columbia</input>
+                            <input type="checkbox" value="FL">Florida</input>
+                            <input type="checkbox" value="GA">Georgia</input>
+                            <input type="checkbox" value="HI">Hawaii</input>
+                            <input type="checkbox" value="ID">Idaho</input>
+                            <input type="checkbox" value="IL">Illinois</input>
+                            <input type="checkbox" value="IN">Indiana</input>
+                            <input type="checkbox" value="IA">Iowa</input>
+                            <input type="checkbox" value="KS">Kansas</input>
+                            <input type="checkbox" value="KY">Kentucky</input>
+                            <input type="checkbox" value="LA">Louisiana</input>
+                            <input type="checkbox" value="ME">Maine</input>
+                            <input type="checkbox" value="MD">Maryland</input>
+                            <input type="checkbox" value="MA">Massachusetts</input>
+                            <input type="checkbox" value="MI">Michigan</input>
+                            <input type="checkbox" value="MN">Minnesota</input>
+                            <input type="checkbox" value="MS">Mississippi</input>
+                            <input type="checkbox" value="MO">Missouri</input>
+                            <input type="checkbox" value="MT">Montana</input>
+                            <input type="checkbox" value="NE">Nebraska</input>
+                            <input type="checkbox" value="NV">Nevada</input>
+                            <input type="checkbox" value="NH">New Hampshire</input>
+                            <input type="checkbox" value="NJ">New Jersey</input>
+                            <input type="checkbox" value="NM">New Mexico</input>
+                            <input type="checkbox" value="NY">New York</input>
+                            <input type="checkbox" value="NC">North Carolina</input>
+                            <input type="checkbox" value="ND">North Dakota</input>
+                            <input type="checkbox" value="OH">Ohio</input>
+                            <input type="checkbox" value="OK">Oklahoma</input>
+                            <input type="checkbox" value="OR">Oregon</input>
+                            <input type="checkbox" value="PA">Pennsylvania</input>
+                            <input type="checkbox" value="RI">Rhode Island</input>
+                            <input type="checkbox" value="SC">South Carolina</input>
+                            <input type="checkbox" value="SD">South Dakota</input>
+                            <input type="checkbox" value="TN">Tennessee</input>
+                            <input type="checkbox" value="TX">Texas</input>
+                            <input type="checkbox" value="UT">Utah</input>
+                            <input type="checkbox" value="VT">Vermont</input>
+                            <input type="checkbox" value="VA">Virginia</input>
+                            <input type="checkbox" value="WA">Washington</input>
+                            <input type="checkbox" value="WV">West Virginia</input>
+                            <input type="checkbox" value="WI">Wisconsin</input>
+                            <input type="checkbox" value="WY">Wyoming</input>
+                          </select>
+                    
