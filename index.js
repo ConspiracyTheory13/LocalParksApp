@@ -21,33 +21,26 @@
 // 'https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=aQEBWaaigBxcc3bJE4l3aLTkWtRiBeJ4ifmuNb7z'
 // https://developer.nps.gov/api/v1/parks?stateCode=WY&stateCode=CA&api_key=aQEBWaaigBxcc3bJE4l3aLTkWtRiBeJ4ifmuNb7z
 
-// app is skipping loop
-// the selected state isn't being taken
-const parkKey ='api_key=aQEBWaaigBxcc3bJE4l3aLTkWtRiBeJ4ifmuNb7z';
-// const parkKey ='&api_key=mMGQuLejSsOa2LgLuvYchvLTmOJ8HthDDuQU9xfj';
+const parkKey ='&api_key=aQEBWaaigBxcc3bJE4l3aLTkWtRiBeJ4ifmuNb7z';
 
 $(".parkLookupForm").submit(function(event){
     event.preventDefault();  
-    let limitSet ='limit='+$(".numberOfResults").val();
-    let url= 'https://developer.nps.gov/api/v1/parks?'+limitSet;
-    let states="stateCode="
+    let limitSet ='&limit='+$(".numberOfResults").val();
+    let url= 'https://developer.nps.gov/api/v1/parks?';
+    let states="";
     let userInput = $("input:checked");
     empty();
+
     for(let i=0; i < userInput.length; i++) {
-    let newUrl = url+states+(userInput[i].defaultValue) + '&'+ limitSet + '&' + parkKey;
-    console.log(newUrl)
-
-    //developer.nps.gov/api/v1/campgrounds?stateCode=CA&stateCode=OR&limit=10&api_key=aQEBWaaigBxcc3bJE4l3aLTkWtRiBeJ4ifmuNb7z"// https://developer.nps.gov/api/v1/parks?limit=10stateCode=AL&limit=10NaN
-        // // ('https://developer.nps.gov/api/v1/parks?'+limitSet+states+parkKey);
-
-    fetch(newUrl)
+      states+=`stateCode=${userInput[i].defaultValue}&`;
+      }
+    url+=states+limitSet+parkKey
+    console.log(url)
+   
+    fetch(url)
     .then(response => response.json())
     .then(responseJson => printParkResults(responseJson));
-    // console.log('https://developer.nps.gov/api/v1/parks?'+limitSet+states+parkKey);
-    // console.log(url);
-    // // console.log(userInput);
-    } 
-});
+   });
 
 //description, url, fullName,
 
